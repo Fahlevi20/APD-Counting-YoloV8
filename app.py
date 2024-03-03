@@ -29,3 +29,15 @@ counter.set_args(view_img=True,
                  reg_pts=region_points,
                  classes_names=model.names,
                  draw_tracks=True)
+
+while cap.isOpened():
+    success, im0 = cap.read()
+    if not success:
+        print("Video frame is empty or video processing has been successfully completed.")
+        break
+    tracks = model.track(im0, persist=True, show=False,
+                         classes=classes_to_count)
+
+    im0 = counter.start_counting(im0, tracks)
+    video_writer.write(im0)
+
