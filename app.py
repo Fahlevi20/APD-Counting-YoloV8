@@ -14,4 +14,7 @@ assert cap.isOpened(), "Error reading video file"
 
 w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT, cv2.CAP_PROP_FPS)) #for set the size and fps
 
-region_points = [(20, 400), (1080, 404), (1080, 360), (20, 360)]
+region_points = [(20, 400), (1080, 404), (1080, 360), (20, 360)] #for the range when we can counting the object
+
+classes_to_count = [0, 1,2,3,4,5,6,7,8,9]  # person and car classes for count
+
