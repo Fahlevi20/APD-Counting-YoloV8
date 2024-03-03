@@ -3,3 +3,8 @@ from ultralytics import YOLO
 from ultralytics.solutions import object_counter
 import cv2
 import os
+
+#deploy model
+model = YOLO("yolov8n_v1_train2\weights\best.pt")
+
+
