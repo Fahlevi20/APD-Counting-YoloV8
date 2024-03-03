@@ -11,3 +11,7 @@ model = YOLO("yolov8n_v1_train2\weights\best.pt")
 cap = cv2.VideoCapture("input\video contoh trim.mp4")
 
 assert cap.isOpened(), "Error reading video file"
+
+w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT, cv2.CAP_PROP_FPS)) #for set the size and fps
+
+region_points = [(20, 400), (1080, 404), (1080, 360), (20, 360)]
