@@ -41,3 +41,6 @@ while cap.isOpened():
     im0 = counter.start_counting(im0, tracks)
     video_writer.write(im0)
 
+cap.release()
+video_writer.release()
+cv2.destroyAllWindows()
