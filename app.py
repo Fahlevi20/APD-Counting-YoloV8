@@ -9,3 +9,5 @@ model = YOLO("yolov8n_v1_train2\weights\best.pt")
 
 #load input video
 cap = cv2.VideoCapture("input\video contoh trim.mp4")
+
+assert cap.isOpened(), "Error reading video file"
