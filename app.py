@@ -18,3 +18,7 @@ region_points = [(20, 400), (1080, 404), (1080, 360), (20, 360)] #for the range 
 
 classes_to_count = [0, 1,2,3,4,5,6,7,8,9]  # person and car classes for count
 
+video_writer = cv2.VideoWriter("output/object_counting_output_test_dengan.mp4",
+                       cv2.VideoWriter_fourcc(*'mp4v'),
+                       fps,
+                       (w, h))
