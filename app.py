@@ -22,3 +22,10 @@ video_writer = cv2.VideoWriter("output/object_counting_output_test_dengan.mp4",
                        cv2.VideoWriter_fourcc(*'mp4v'),
                        fps,
                        (w, h))
+
+# for counting the object
+counter = object_counter.ObjectCounter()
+counter.set_args(view_img=True,
+                 reg_pts=region_points,
+                 classes_names=model.names,
+                 draw_tracks=True)
