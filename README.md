@@ -1,4 +1,4 @@
-# Synapsis Challenge Test APD Detection
+# SAPD Counting using YoloV8
 
 ## Dataset
 You can download the dataset from this link [Construction Site Safety Image Dataset Roboflow](https://www.kaggle.com/datasets/snehilsanyal/construction-site-safety-image-dataset-roboflow)
